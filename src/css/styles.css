@@ -7,19 +7,173 @@
 @import url('./reset.css');
 @import url('./vite-promo.css');
 @import url('./header.css');
+@import url('./vite-promo.css');
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 371px;
+  height: 40px;
+  margin: 36px auto 0;
+}
+.search-form button {
+  width: 91px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  gap: 10px;
+  background-color: #4E75FF;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-input {
+  font-size: 16px;
+  width: 272px;
+  height: 22px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.search-input.active {
+  border-color: #4E75FF;
+}
+
+.gallery {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 250px;
+  margin-top: 32px;
+  overflow: hidden;
+  max-width: 1128px;
+  width: 100%; /* Добавлено: ширина галереи теперь 100% */
+  margin-left: 0; /* Добавлено: обнуляем отступ слева */
+  gap: 24px;
+}
+
+.gallery-item {
+  box-sizing: border-box;
+  width: 250px;
+  border: 1px solid #808080;
+  position: relative;
+  margin: 10px 12px; /* Расстояние между карточками и между строками */
+  line-height: 24px;
+}
+
+.gallery-link {
+  text-decoration: none;
+  color: #333;
+  margin: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #808080;
+}
+
+.gallery-item-info {
+  position: absolute;
+  top: 264px;
+  left: 176px;
+  width: 74px; /* Ширина блока Likes, Views, Comments, Downloads, Width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #2E2F42;
+}
+
+.gallery-item-info div {
+  margin-bottom: 8px;
+}
+
+.gallery-item-info .downloads {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 4%;
+  color: #2E2F42;
+  margin-top: 16px; /* Отступ от предыдущего текста */
+}
+
+.gallery-item-info .width-text,
+.gallery-item-info .width-value {
+  width: 43px;
+  height: 24px;
+  font-size: 24px; /* Размер текста Width */
+  line-height: 24px;
+  color: #2E2F42;
+}
+
+.gallery-item-info .width-text {
+  top: 280px;
+  left: 432px;
+}
+
+.gallery-item-info .width-value {
+  top: 280px;
+  left: 432px;
+  margin-top: 8px; /* Отступ от предыдущего текста */
+}
+
+.loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loader.visible {
+  display: flex;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.load-more-btn {
+  width: 125px;
+  height: 40px;
+  margin-top: 8px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  gap: 10px;
+  background-color: #4E75FF;
+  color: #fff;
+  cursor: pointer;
+}
+
