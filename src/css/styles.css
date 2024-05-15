@@ -22,19 +22,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 371px;
   height: 40px;
-  margin: 36px auto 0;
-}
-.search-form button {
-  width: 91px;
-  height: 40px;
-  border-radius: 8px;
-  padding: 8px 16px;
-  gap: 10px;
-  background-color: #4E75FF;
-  color: #fff;
-  cursor: pointer;
+  margin: 36px auto 32px;
 }
 
 .search-input {
@@ -46,9 +35,32 @@ body {
   padding: 8px;
 }
 
-.search-input.active {
-  border-color: #4E75FF;
+.search-input:hover,
+.search-input:focus{
+  border: 1px solid #000000;
 }
+
+.search-input:active {
+  border: 1px solid #4E75FF;
+}
+
+.form-btn {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  width: 91px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  gap: 10px;
+  background-color: #4E75FF;
+  border-color: #4E75FF;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 .gallery {
   list-style: none;
@@ -56,20 +68,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 250px;
-  margin-top: 32px;
+ /* width: 250px;
   overflow: hidden;
   max-width: 1128px;
-  width: 100%;
+  width: 100%;*/
+  gap: 24px;
+  margin-bottom: 36px;
 }
 
 .gallery-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
   box-sizing: border-box;
-  width: 250px;
+  justify-content: space-evenly;
+  /*width: 250px;*/
   border: 1px solid #808080;
   position: relative;
-  margin: 10px 12px; /* Расстояние между карточками и между строками */
-  line-height: 24px;
+  height: 100%;
+  width: 360px;
 }
 
 .gallery-link {
@@ -79,8 +97,11 @@ body {
 }
 
 .gallery-image {
-  width: 100%;
-  height: auto;
+  /*width: 100%;
+  height: auto;*/
+  width: 360px;
+  height: 152px;
+  object-fit: cover;
 }
 
 .gallery-item img {
@@ -134,7 +155,7 @@ body {
   top: 280px;
   left: 432px;
   margin-top: 8px; /* Отступ от предыдущего текста */
-}
+}*/
 
 .loader {
   display: none;
@@ -146,6 +167,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   justify-content: center;
   align-items: center;
+  margin-top: 32px;
 }
 
 @keyframes fadeIn {
@@ -170,6 +192,7 @@ body {
   padding: 8px 16px;
   gap: 10px;
   background-color: #4E75FF;
+  border-color: #4E75FF;
   color: #fff;
   cursor: pointer;
 }
