@@ -60,9 +60,7 @@ body {
   margin-top: 32px;
   overflow: hidden;
   max-width: 1128px;
-  width: 100%; /* Добавлено: ширина галереи теперь 100% */
-  margin-left: 0; /* Добавлено: обнуляем отступ слева */
-  gap: 24px;
+  width: 100%;
 }
 
 .gallery-item {
